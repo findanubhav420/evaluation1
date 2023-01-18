@@ -1,9 +1,17 @@
 function bowlingScore(input) {
-    let n = input.length;
+    
+    let total_throw = input.length;
     let total_score = 0;
     let frame_count = 1;
     let index = 0
-    while (index < n) {
+    if(total_throw<12){
+        throw new Error('not possible');
+    }
+    if(total_throw>21){
+        throw new Error('not possible');
+    }
+    
+    while (index < total_throw) {
 
         if (frame_count == 10) {
             if (input[index] == 10) {
@@ -35,6 +43,22 @@ function bowlingScore(input) {
     return total_score;
 }
 
-// const score = bowlingScore([10, 1, 5, 1, 2, 10, 5, 2, 10, 10, 8, 1, 10, 3, 2]);
-// console.log(score);
+
+
+// 2nd part
+
+// const bestScore=(gameSets)=>{
+//     return gameSets.reduce((maxScore,game)=>{
+//         const gameScore=bowlingScore(game)
+//         maxScore=Math.max(maxScore,gameScore)
+
+//         return maxScore;
+//     })
+// }
+
+
+
+
+
+
 module.exports=bowlingScore;
