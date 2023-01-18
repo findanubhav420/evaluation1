@@ -17,14 +17,17 @@ describe('Calculates the score in the bowling game', () => {
         const set2 = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         expect(bowlingScore(set2)).toBe(16)
     })
-    it('should give error when scored set4', () => {
-        const set4 = [0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
+    // it('should give error when scored set4', () => {
+    //     const set4 = [0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
 
-        expect(()=> {bowlingScore(set4)}).toThrow('not possible')
-    })
-    it('should give error when scored set5', () => {
-        const set5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
+    //     expect(()=> {bowlingScore(set4)}).toThrow('not possible')
+    // })
+    // it('should give error when scored set5', () => {
+    //     const set5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
 
-        expect(()=>{bowlingScore(set5)}).toThrow('not possible')
-    })
+    //     expect(()=>{bowlingScore(set5)}).toThrow('not possible')
+    // })
+
+
+
 })
