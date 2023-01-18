@@ -10,11 +10,11 @@ describe('Calculates the score in the bowling game',()=>{
 
     it('should give 90 when scored set2',()=>{
         const set2=[3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
-        expect(bowlingScore(set2).toBe(90))
-    })
-    it('should give 90 when scored set2',()=>{
-        const set2=[3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
-        expect(bowlingScore(set2).toBe(90))
+        expect(bowlingScore(set2)).toBe(90)
     })
 
+    it('should give 16 when scored set3',()=>{
+        const set2=[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        expect(bowlingScore(set2)).toBe(16)
+    })
 })
