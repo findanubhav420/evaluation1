@@ -1,4 +1,4 @@
-const bowlingScore = require('./bowlingGameCalculator')
+const {bowlingScore,bestScore} = require('./bowlingGameCalculator')
 
 describe('Calculates the score in the bowling game', () => {
 
@@ -27,7 +27,11 @@ describe('Calculates the score in the bowling game', () => {
 
     //     expect(()=>{bowlingScore(set5)}).toThrow('not possible')
     // })
+    it('should give 90 when scored gameSets1', () => {
+        const gameSets1 = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10], [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6], [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
+        expect(bestScore(gameSets1)).toBe(90)
+    })
 
 
 })
