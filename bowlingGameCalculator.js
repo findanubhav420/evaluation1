@@ -1,3 +1,4 @@
+// first part
 function bowlingScore(input) {
 
     let total_throw = input.length;
@@ -52,19 +53,23 @@ function bowlingScore(input) {
 // 2nd part
 
 
-// const bestScore = (gameSets) => {
-//     return gameSets.reduce((maxScore, game) => {
-//         let gameScore = bowlingScore(game)
-//         console.log(gameScore);
-//         maxScore = Math.max(maxScore, gameScore)
+const bestScore = (gameSets) => {
+    const gameSet = gameSets.reduce((maxScore, game) => {
 
-//         return maxScore;
-//     })
-// }
+        if (bowlingScore(maxScore) > bowlingScore(game))
+            return maxScore;
+        else
+            return game;
 
-// const gameSets = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10], [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6], [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
+    })
+
+    return bowlingScore(gameSet);
+}
+
+// 
 // console.log(bestScore(gameSets));
 
 
-module.exports = bowlingScore;
+
+module.exports = { bowlingScore, bestScore }
